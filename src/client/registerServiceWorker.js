@@ -6,7 +6,7 @@
 //
 // We will only be doing this for production builds.
 
-import { safeConfigGet } from '../shared/utils/config';
+import { safeConfigGet } from '../app/utils/config';
 
 if (process.env.NODE_ENV === 'production') {
   // We check the shared config, ensuring that the service worker has been

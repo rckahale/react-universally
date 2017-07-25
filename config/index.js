@@ -14,7 +14,7 @@ import type { BuildOptions } from '../tools/types';
 // This protects us from accidentally including this configuration in our
 // client bundle. That would be a big NO NO to do. :)
 if (process.env.IS_CLIENT) {
-  throw new Error("You shouldn't be importing the `./config` directly into your 'client' or 'shared' source as the configuration object will get included in your client bundle. Not a safe move! Instead, use the `safeConfigGet` helper function (located at `./src/shared/utils/config`) within the 'client' or 'shared' source files to reference configuration values in a safe manner.");
+  throw new Error("You shouldn't be importing the `./config` directly into your 'client' or 'shared' source as the configuration object will get included in your client bundle. Not a safe move! Instead, use the `safeConfigGet` helper function (located at `./src/app/utils/config`) within the 'client' or 'shared' source files to reference configuration values in a safe manner.");
 }
 
 const config = {
@@ -22,10 +22,10 @@ const config = {
   host: getStringEnvVar('SERVER_HOST', 'localhost'),
 
   // The port on which the server should run.
-  port: getIntEnvVar('SERVER_PORT', 1337),
+  port: getIntEnvVar('SERVER_PORT', 7337),
 
   // The port on which the client bundle development server should run.
-  clientDevServerPort: getIntEnvVar('CLIENT_DEVSERVER_PORT', 7331),
+  clientDevServerPort: getIntEnvVar('CLIENT_DEVSERVER_PORT', 7333),
 
   // This is an example environment variable which is consumed within the
   // './client.js' config.  See there for more details.
@@ -59,7 +59,7 @@ const config = {
   includeSourceMapsForProductionBuilds: false,
 
   // Path to the shared src between the bundles.
-  bundlesSharedSrcPath: './src/shared',
+  bundlesSharedSrcPath: './src/app',
 
   // These extensions are tried when resolving src files for our bundles..
   bundleSrcTypes: ['js', 'jsx', 'json'],
@@ -200,7 +200,7 @@ const config = {
       // Src paths.
       srcPaths: [
         './src/client',
-        './src/shared',
+        './src/app',
         // The service worker offline page generation needs access to the
         // config folder.  Don't worry we have guards within the config files
         // to ensure they never get included in a client bundle.
@@ -273,7 +273,7 @@ const config = {
       // Src paths.
       srcPaths: [
         './src/server',
-        './src/shared',
+        './src/app',
         './config',
       ],
 
@@ -299,7 +299,7 @@ const config = {
       srcEntryFile: './src/api/index.js',
       srcPaths: [
         './src/api',
-        './src/shared',
+        './src/app',
         './config',
       ],
       outputPath: './build/api',
@@ -439,7 +439,7 @@ export const clientConfig = filterObject(
   // This object will be bound to the window.__CLIENT_CONFIG__
   // property which is where client code should be referencing it from.
   // As we generally have shared code between our node/browser code we have
-  // created a helper function in "./src/shared/utils/config" that you can used
+  // created a helper function in "./src/app/utils/config" that you can used
   // to request config values from.  It will make sure that either the
   // application config file is used (i.e. this file), or the
   // window.__CLIENT_CONFIG__ is used.  This avoids boilerplate throughout your

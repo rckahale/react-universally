@@ -8,9 +8,9 @@ import { Provider } from 'react-redux';
 import { CodeSplitProvider, createRenderContext } from 'code-split-component';
 import Helmet from 'react-helmet';
 import generateHTML from './generateHTML';
-import DemoApp from '../../../shared/components/DemoApp';
-import runTasksForLocation from '../../../shared/routeTasks/runTasksForLocation';
-import configureStore from '../../../shared/redux/configureStore';
+import DemoApp from '../../../app/components/DemoApp';
+import runTasksForLocation from '../../../app/routeTasks/runTasksForLocation';
+import configureStore from '../../../app/store/configureStore';
 import config from '../../../../config';
 
 /**

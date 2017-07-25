@@ -6,9 +6,9 @@ import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router';
 import { CodeSplitProvider, rehydrateState } from 'code-split-component';
 import { Provider } from 'react-redux';
-import configureStore from '../shared/redux/configureStore';
+import configureStore from '../app/store/configureStore';
 import ReactHotLoader from './components/ReactHotLoader';
-import DemoApp from '../shared/components/DemoApp';
+import DemoApp from '../app/components/DemoApp';
 import TaskRoutesExecutor from './components/TaskRoutesExecutor';
 
 // Get the DOM Element that will host our React application.
@@ -39,7 +39,7 @@ function renderApp(TheApp) {
               {
                 // The TaskRoutesExecutor makes sure any data tasks are
                 // executed prior to our route being loaded.
-                // @see ./src/shared/routeTasks/
+                // @see ./src/app/routeTasks/
                 routerProps => (
                   <TaskRoutesExecutor {...routerProps} dispatch={store.dispatch}>
                     <TheApp />
@@ -61,8 +61,8 @@ if (process.env.NODE_ENV === 'development' && module.hot) {
   module.hot.accept('./index.js');
   // Any changes to our App will cause a hotload re-render.
   module.hot.accept(
-    '../shared/components/DemoApp',
-    () => renderApp(require('../shared/components/DemoApp').default),
+    '../app/components/DemoApp',
+    () => renderApp(require('../app/components/DemoApp').default),
   );
 }
 

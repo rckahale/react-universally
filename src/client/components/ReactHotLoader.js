@@ -3,7 +3,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 import React from 'react';
-import type { ReactChildren } from '../../shared/types/react';
+import type { ReactChildren } from '../../app/types/react';
 
 // We create this wrapper so that we only import react-hot-laoder for a
 // development build.  Small savings. :)

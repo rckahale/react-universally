@@ -27,7 +27,7 @@ const srcPaths = [
   path.resolve(appRootDir.get(), './config'),
 ];
 const flowTypesPaths = [
-  path.resolve(appRootDir.get(), './src/shared/types'),
+  path.resolve(appRootDir.get(), './src/app/types'),
   path.resolve(appRootDir.get(), './tools/types.js'),
 ];
 const flowConfigPath = path.resolve(appRootDir.get(), './.flowconfig');
