@@ -8,7 +8,7 @@ import { CodeSplitProvider, rehydrateState } from 'code-split-component';
 import { Provider } from 'react-redux';
 import configureStore from '../app/store/configureStore';
 import ReactHotLoader from './components/ReactHotLoader';
-import DemoApp from '../app/components/DemoApp';
+import App from '../app/components';
 import TaskRoutesExecutor from './components/TaskRoutesExecutor';
 
 // Get the DOM Element that will host our React application.
@@ -61,13 +61,13 @@ if (process.env.NODE_ENV === 'development' && module.hot) {
   module.hot.accept('./index.js');
   // Any changes to our App will cause a hotload re-render.
   module.hot.accept(
-    '../app/components/DemoApp',
-    () => renderApp(require('../app/components/DemoApp').default),
+    '../app/components/AppRoutes',
+    () => renderApp(require('../app/components/AppRoutes').default),
   );
 }
 
 // Execute the first render of our app.
-renderApp(DemoApp);
+renderApp(App);
 
 // This registers our service worker for asset caching and offline support.
 // Keep this as the last item, just in case the code execution failed (thanks

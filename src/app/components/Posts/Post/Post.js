@@ -3,7 +3,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import * as FromState from '../../../../reducers';
+import * as FromState from '../../../reducers';
 import type { Post as PostType } from '../../../../types/model';
 
 type Props = {
