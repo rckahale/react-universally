@@ -1,5 +1,3 @@
-/* @flow */
-
 import uuid from 'uuid';
 import hpp from 'hpp';
 import helmet from 'helmet';

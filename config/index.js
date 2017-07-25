@@ -1,5 +1,3 @@
-/* @flow */
-
 // Application Configuration.
 //
 // Please see the /docs/ApplicationConfig.md documentation for more info.

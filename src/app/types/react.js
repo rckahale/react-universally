@@ -1,5 +1,3 @@
-/* @flow */
-
 // Note: we already have the definitions from
 // https://github.com/facebook/flow/blob/master/lib/react.js
 // so the below are merely helpful extensions.

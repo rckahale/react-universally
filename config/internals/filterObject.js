@@ -1,5 +1,3 @@
-/* @flow */
-
 function filterObjectLoop(obj : Object, filters : Object, basePropPath = '') : Object {
   return Object.keys(filters).reduce((acc, key) => {
     const propPath = basePropPath !== '' ? `${basePropPath}.${key}` : key;

@@ -1,5 +1,3 @@
-/* @flow */
-
 import type { $Request, $Response, Middleware } from 'express';
 import React from 'react';
 import { renderToString } from 'react-dom/server';

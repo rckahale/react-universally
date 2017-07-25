@@ -1,5 +1,3 @@
-/* @flow */
-
 type WebpackHot = {
   accept(path: ?string) : void;
 }

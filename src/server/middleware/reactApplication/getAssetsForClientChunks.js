@@ -1,5 +1,3 @@
-/* @flow */
-
 // This file resolves the assets available from our client bundle.
 
 import fs from 'fs';

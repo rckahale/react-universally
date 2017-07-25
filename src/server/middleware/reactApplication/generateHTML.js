@@ -1,5 +1,3 @@
-/* @flow */
-
 // This module is responsible for generating the HTML page response for
 // the react application middleware.
 //

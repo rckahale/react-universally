@@ -1,5 +1,3 @@
-/* @flow */
-
 const { log } = require('../utils');
 
 class ListenerManager {

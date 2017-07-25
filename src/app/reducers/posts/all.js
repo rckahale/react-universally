@@ -1,5 +1,3 @@
-/* @flow */
-
 import type { Reducer } from 'redux';
 import type { Action } from '../../types/redux';
 

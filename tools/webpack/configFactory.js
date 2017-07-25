@@ -1,5 +1,3 @@
-/* @flow */
-
 import path from 'path';
 import { sync as globSync } from 'glob';
 import webpack from 'webpack';

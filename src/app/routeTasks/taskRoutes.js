@@ -1,5 +1,3 @@
-/* @flow */
-
 import type { TaskRouteLocals } from '../types/react-router';
 import * as PostActions from '../actions/posts';
 

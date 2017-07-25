@@ -1,5 +1,3 @@
-/* @flow */
-
 import { sync as globSync } from 'glob';
 import path from 'path';
 import appRootDir from 'app-root-dir';

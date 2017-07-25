@@ -1,5 +1,3 @@
-/* @flow */
-
 import webpackConfigFactory from './configFactory';
 
 type Options = { mode?: 'production'|'development' };

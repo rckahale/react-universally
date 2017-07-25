@@ -1,5 +1,3 @@
-/* @flow */
-
 import HappyPack from 'happypack';
 import notifier from 'node-notifier';
 import colors from 'colors/safe';

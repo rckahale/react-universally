@@ -1,4 +1,3 @@
-/* @flow */
 /* eslint-disable no-console */
 
 // This grants us source map support, which combined with our webpack source

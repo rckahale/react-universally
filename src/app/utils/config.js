@@ -1,4 +1,3 @@
-/* @flow */
 /* eslint-disable no-console */
 /* eslint-disable import/global-require */
 /* eslint-disable import/prefer-default-export */

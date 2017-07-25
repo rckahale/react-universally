@@ -1,4 +1,3 @@
-/* @flow */
 
 import matchRoutesToLocation from 'react-router-addons-routes/matchRoutesToLocation';
 

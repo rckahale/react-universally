@@ -1,5 +1,3 @@
-/* @flow */
-
 import path from 'path';
 import appRootDir from 'app-root-dir';
 import { spawn } from 'child_process';

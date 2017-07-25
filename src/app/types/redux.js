@@ -1,5 +1,3 @@
-/* @flow */
-
 import Axios from 'axios';
 import type { Post } from './model';
 import type { State } from '../reducers';

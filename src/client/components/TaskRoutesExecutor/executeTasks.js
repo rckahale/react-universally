@@ -1,5 +1,3 @@
-/* @flow */
-
 import type { Location } from '../../../app/types/react-router';
 import type { Dispatch, ThunkAction } from '../../../app/types/redux';
 import runTasksForLocation from '../../../app/routeTasks/runTasksForLocation';

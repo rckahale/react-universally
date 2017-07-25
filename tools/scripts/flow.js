@@ -1,5 +1,3 @@
-/* @flow */
-
 // Runs flow type checking.
 
 import { existsSync } from 'fs';

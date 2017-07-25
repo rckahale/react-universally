@@ -1,5 +1,3 @@
-/* @flow */
-
 import webpack from 'webpack';
 import { resolve as pathResolve } from 'path';
 import appRootDir from 'app-root-dir';
